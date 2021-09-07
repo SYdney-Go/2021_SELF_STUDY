@@ -5,26 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
-    <link href="./practice.css" rel="stylesheet" type="text/css">
-
+    <link href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="what_time_is_it.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./blog_list.html">Blog</a>
-        <a href="./aboutme.html">About me</a>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">석영이와 함께 Do It Django 공부하기 >_<</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blog_list.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./aboutme.html">About Me</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <h1>About Me</h1>
+        <h2>광인사 2기 고석영입니다.</h2>
+        <p>HTML, CSS< JS< Django로 재미있는 웹사이트 만드는 것을 좋아합니다!</p>
+        <p>맛있는거 먹는것도, 고양이랑 재현씨도 너무 좋아합니다!</p>
 
-    <h1>About Me</h1>
-    <h2>광인사 2기 고석영입니다.</h2>
-    <p>HTML, CSS< JS< Django로 재미있는 웹사이트 만드는 것을 좋아합니다!</p>
-    <p>맛있는거 먹는것도, 고양이랑 재현씨도 너무 좋아합니다!</p>
+        <button onclick="whatTimeIsIt()">현재시간</button>
+        <hr />
+        
+        <a href="index.html">첫 화면으로 가기</a>
+        <img src="./images/burger-6113497_960_720.jpg" height="400px">
 
-    <button onclick="whatTimeIsIt()">현재시간</button>
-    <hr />
-    
-    <a href="index.html">첫 화면으로 가기</a>
-    <img src="./images/burger-6113497_960_720.jpg" height="400px">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    </div>
 </body>
 </html>
