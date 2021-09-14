@@ -7,6 +7,7 @@
     <title>About me</title>
     <link href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="what_time_is_it.js"></script>
+    <script src="https://kit.fontawesome.com/dfe0709c53.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,17 +38,62 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item mr-auto">
-            <a class="nav-link" href="#">Log In</a>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Log In
+            </a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>   
     </div>
   </nav>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-sign-in-alt"></i>&nbsp
+            Log In
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              &times;
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fab fa-google"></i>&nbsp&nbsp
+                Log in with Google
+              </button>
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="far fa-envelope"></i>&nbsp&nbsp
+                Log in with in E-mail
+              </button>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="far fa-envelope"></i>&nbsp&nbsp
+                Sign Up With E-mail
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="container">
     <div class="row my-3">
       <div class="col-9">
@@ -65,20 +111,31 @@
     </div>
 
     <div class="row">
+      <div>
+        <h2>Portofolio</h2>
+      </div>
       <div class="col-sm col-lg-6 bg-info">
-        One of three columns
+        <img src="./images/hamburger-494706_1920.jpg" class="img-fluid">
       </div>
       <div class="col-sm col-lg-3 bg-secondary">
-        One of three columns
+          <img src="./images/cat-691175_1920.jpg" class="img-fluid">
       </div>
       <div class="col-sm col-lg-3 bg-warning">
-        One of three columns
+          <img src="./images/cat-1940487_1920.jpg" class="img-fluid">
       </div>
     </div>
   </div>
 </div>
-  </div>
+
+  <!-- Footer-->
+  <footer class=" my-5 py-1 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Do It Django A to Z 2021
+        </p>
+      </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </body>
-</html>
+</html

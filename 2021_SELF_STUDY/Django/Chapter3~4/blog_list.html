@@ -4,123 +4,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>About me</title>
     <link href="./bootstrap5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="what_time_is_it.js"></script>
+    <script src="https://kit.fontawesome.com/dfe0709c53.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="./index.html">석영이와 함께 Do It Django 공부하기 >_<</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./blog_list.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./aboutme.html">About Me</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">석영이와 함께 Do It Django 공부하기 >_<</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./blog_list.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutme.html">About Me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Log In
+            </a>
+          </li>
+        </ul>
+      </div>   
+    </div>
+  </nav>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-sign-in-alt"></i>&nbsp
+            Log In
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              &times;
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fab fa-google"></i>&nbsp&nbsp
+                Log in with Google
+              </button>
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="far fa-envelope"></i>&nbsp&nbsp
+                Log in with in E-mail
+              </button>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="far fa-envelope"></i>&nbsp&nbsp
+                Sign Up With E-mail
+              </button>
+            </div>
           </div>
         </div>
-      </nav>
-      <div class="container my-3">
-          <div class="row">
-            <div class="col-md-8 col-lg-9">
-              <h1>Blog<h1>
-              <!--Blog Post-->
-              <div class="card mb-4">
-                  <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                  <div class="card-body">
-                      <div class="small text-muted">January 1, 2021</div>
-                      <h2 class="card-title h4">Post Title</h2>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                      <a class="btn btn-primary" href="#!">Read more →</a>
-                  </div>
-              </div>
-              <!--Blog Post-->
-              <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                <div class="card-body">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-3">
+      <div class="row">
+        <div class="col-md-8 col-lg-9">
+          <h1>Blog<h1>
+          <!--Blog Post-->
+          <div class="card mb-4">
+              <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+              <div class="card-body">
                   <div class="small text-muted">January 1, 2021</div>
                   <h2 class="card-title h4">Post Title</h2>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
                   <a class="btn btn-primary" href="#!">Read more →</a>
-                </div>
               </div>
-            </div>
-            <div class="col-md-4 col-lg-3">
-              <!-- Search widget-->
-              <div class="card mb-4">
-                <div class="card-header">Search</div>
-                  <div class="card-body">
-                    <div class="input-group">
-                      <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                      <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                    </div>
-                </div>
-              </div>
-              <!-- Categories widget-->
-                <div class="card mb-4">
-                  <div class="card-header">Categories</div>
-                  <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul class="list-unstyled mb-0">
-                            <li><a href="#!">Web Design</a></li>
-                            <li><a href="#!">HTML</a></li>
-                            <li><a href="#!">Freebies</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul class="list-unstyled mb-0">
-                            <li><a href="#!">JavaScript</a></li>
-                            <li><a href="#!">CSS</a></li>
-                            <li><a href="#!">Tutorials</a></li>
-                          </ul>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <!-- Pagination-->
-            <nav aria-label="Pagination">
-              <hr class="my-0" />
-              <ul class="pagination justify-content-center my-4">
-                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-                <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-                <li class="page-item"><a class="page-link" href="#!">2</a></li>
-                <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                <li class="page-item"><a class="page-link" href="#!">15</a></li>
-                <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-              </ul>
-            </nav>
           </div>
+          <!--Blog Post-->
+          <div class="card mb-4">
+            <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+            <div class="card-body">
+              <div class="small text-muted">January 1, 2021</div>
+              <h2 class="card-title h4">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
+              <a class="btn btn-primary" href="#!">Read more →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <!-- Search widget-->
+          <div class="card mb-4">
+            <div class="card-header">Search</div>
+              <div class="card-body">
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                  <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                </div>
+            </div>
+          </div>
+          <!-- Categories widget-->
+            <div class="card mb-4">
+              <div class="card-header">Categories</div>
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="#!">Web Design</a></li>
+                        <li><a href="#!">HTML</a></li>
+                        <li><a href="#!">Freebies</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="#!">JavaScript</a></li>
+                        <li><a href="#!">CSS</a></li>
+                        <li><a href="#!">Tutorials</a></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Pagination-->
+        <nav aria-label="Pagination">
+          <hr class="my-0" />
+          <ul class="pagination justify-content-center my-4">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+            <li class="page-item"><a class="page-link" href="#!">2</a></li>
+            <li class="page-item"><a class="page-link" href="#!">3</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+            <li class="page-item"><a class="page-link" href="#!">15</a></li>
+            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+          </ul>
+        </nav>
       </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </body>
