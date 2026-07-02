@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/dfe0709c53.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+{% include 'blog/navbar.html' %}
+
+<div class="container my-3">
+    <div class="row">
+      <div class="col-md-8 col-lg-9" id="main-area">
+        {% block main_area %}
+        {% endblock %}
+      </div>
+      <div class="col-md-4 col-lg-3">
+          <!-- Search widget-->
+          <div class="card mb-4">
+          <div class="card-header">Search</div>
+              <div class="card-body">
+              <div class="input-group-btn; background-color: rgba(255, 255, 255, 0.6);">
+                  <input class="form-control" type="text" placeholder="Search for"..." id="search-input" />
+                  <button class="btn btn-primary" type="button" onclick="searchPost();">Go!</button>
+              </div>
+          </div>
+          </div>
+          <!-- Categories widget-->
+          <div class="card mb-4" id="categories-card">
+              <div class="card-header">Categories</div>
+              <div class="card-body">
+                  <div class="row">
+                      <ul>
+                        {% for category in categories %}
+                        <li>
+                            <a href="{{ category.get_absolute_url }}">{{ category }} ({{ category.post_set.count }})</a>
+                        </li>
+                        {% endfor %}
+                        <li>
+                            <a href="/blog/category/no_category/">미분류 ({{ no_category_post_count }})</a>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </nav>
+    </div>
+</div>
+
+{% include 'blog/footer.html' %}
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>

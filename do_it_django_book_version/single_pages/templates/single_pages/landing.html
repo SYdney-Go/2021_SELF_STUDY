@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do it Django!!</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/landing.css' %}" media="screen">
+
+    <script src="https://kit.fontawesome.com/dfe0709c53.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+{% include 'blog/navbar.html' %}
+<section>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6 text-light">
+                <h1 class="mt-5"> Do It Django </h1>
+                <p> 책 보고 따라만든 이상한 블로그... </p>
+            </div>
+            <div class="col-lg-5 mt-5">
+                <h2 class="text-light">Blog - Recent posts</h2>
+                {% for post in recent_post %}
+                    <div class="card mt-1" style="background-color: rgba(255, 255, 255, 0.6)">
+                        <div class="card-body">
+                            <h6>
+                                <a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">
+                                    {{ post.title }}
+                                </a>
+                            </h6>
+                            <span class="badge badge-pill bg-light text-dark float-end">
+                                <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}">
+                                {{ post.author.username }}
+                                &nbsp;
+                                &nbsp;
+                                {{ post.created_at }}
+                            </span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+</body>
+</html>
